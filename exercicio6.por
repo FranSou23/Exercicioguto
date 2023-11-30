@@ -14,9 +14,9 @@ programa {
   
   media = (nota1 + nota2 + nota3)/3
   
-  se ( media >= 7){
+  se ( media >= 7 e media <10){
     escreva("Aprovado")
-  } senao se (media <= 6 ) {
+  } senao se (media < 7 ) {
    escreva("Reprovado")
   } senao se (media == 10){
     escreva ("Aprovado com Distinção")
