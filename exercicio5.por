@@ -3,30 +3,36 @@ programa {
     real numero1, numero2, soma, resto
     caracter operacao
 
-  escreva("Informe primeiro numero: ")
-    leia (numero1)
+    escreva("Escreva o primeiro numero: ")
+    leia(numero1)
 
-  escreva("Informe segundo numero:")
-  leia (numero2)
- 
-  escreva("Qual operação vc deseja fazer + ou - ? ")
-  leia (operacao)
+    escreva("Escreva o segundo número: ")
+    leia(numero2)
 
-  se(operacao == "+"){
-    soma = numero1 + numero2
-  } senao se (operacao == "-"){
-      soma = numero1 - numero2
-  } senao{
-    escreva ("Operação Invalida")
+    escreva("Qaul operação vc deseja fazer? + ou -?: ")
+    leia(operacao)
+
+    se(operacao == "+"){
+      soma = numero1 + numero2
+    } senao se (operacao == "-"){
+        soma = numero1 - numero2
+      } senao {
+        escreva("operação inválida")
+      }
+    resto = soma % 2
+
+    se(resto == 0){
+      escreva("O resultado é " + soma + ", esse número é par, positvo")
+    } senao {
+        escreva("O resultado é " + soma + ", esse número é impar, negativo")
+    }    
+    se(soma % 1 == 0) {
+      escreva(" e é um número inteiro.")
+    } senao {
+        escreva(" e é um número decimal.")
+    }
   }
-  resto = soma % 2
-
-  se(resto == 0){
-    escreva("Esté numero é par")
-  } senao{
-    escreva("Esté numero é impar")
-  }
-  
+}
 
   }
 }
